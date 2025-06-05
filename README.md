@@ -1,7 +1,8 @@
 # tailwind-capacitacao-byron
-Para rodar o projeto:
-entre na pasta e execute:
-npm install tailwindcss @tailwindcss/cli
-npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
+Para usar o projeto:
 
-Abra a página index.html no seu navegador, ou use o Live Server
+> git clone https://github.com/meloluvert/tailwind-capacitacao-byron.git
+
+Abra a pasta tailwind-capacitacao-byron pelo navegador e entre em index.html
+
+Ou se preferir, pode usar o [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
