@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portifólio</title>
     <link rel="stylesheet" href="./output.css" />
+    <link rel="shortcut icon" href="./img/icon_logo.png" type="image/x-icon">
   </head>
   <body class="font-main">
     <!-- Header  -->
     <header
-      class="bg-black text-white flex flex-row justify-between items-center px-8 py-9"
+      class="bg-black text-white flex flex-row justify-between items-center px-8 py-9 lg:px-30"
     >
       <div class="flex flex-row gap-4 items-center">
         <div class="size-12">
@@ -17,31 +18,46 @@
         </div>
         <h1 class="text-4xl">Portfólio</h1>
       </div>
-      <div class="size-8">
+      <div class="hidden lg:flex lg:flex-row items-center gap-8">
+        <a href="#" class="text-2xl hover:text-main transiiton duration-200"
+          >Início</a
+        >
+        <a href="#projetos" class="text-2xl hover:text-main transiiton duration-200"
+          >Projetos</a
+        >
+        <a
+          href="mailto:lucasmiranda@byronsolutions.com"
+          class="text-2xl font-semibold text-white bg-main px-4 py-2 rounded-2xl hover:bg-green-600 transition duration-200"
+        >
+          Entre em contato
+        </a>
+      </div>
+      <div class="size-8 lg:hidden">
         <img src="./img/icon_hamburguer.png" alt="Ícone do menu hamburguer" />
       </div>
     </header>
 
     <!-- Hero -->
-    <section class="text-black px-6 py-16 bg-white flex items-center flex-col">
-      <div class="max-w-[400px] max-h-[400px]">
+    <section class="text-black px-6 lg:px-30 py-16 bg-white flex items-center min-h-screen flex-col lg:flex-row-reverse lg:justify-between">
+      <div class="lg:w-1/2 max-w-[400px] max-h-[400px] lg:max-w-[700px] lg:max-h-[700px]   overflow-hidden flex items-center lg:justify-end">
         <img
-          src="./img/sally.png"
-          alt="Imagem da Sally, mascote da byron.solutions"
+          src="./img/lucas.jpeg"
+          alt="Imagem de homem jovem com paisagem desfocada ao fundo"
+          class="rounded-full border-secondary border-3 hover:opacity-95    "
         />
       </div>
-      <div class="flex flex-col gap-12">
-        <div class="text-center flex flex-col gap-8 items-center">
-          <div class="flex flex-col gap-8">
+      <div class="flex lg:max-w-[560px] flex-col gap-12 lg:w-1/2">
+        <div class="text-center lg:text-start flex flex-col gap-8 items-center lg:items-start">
+          <div class="flex flex-col gap-8 max-w-3/4">
             <h2 class="text-5xl">
-              Conheça a <span class="text-secondary">Sally</span>
+              Conheça a <span class="text-secondary">Lucas Melo</span>
             </h2>
             <div class="flex flex-col gap-4">
               <h3 class="text-2xl">
-                A mas cote da
+                Trainee da
                 <span class="text-secondary"> byron.solutions! </span>
               </h3>
-              <p class="text-base text-center">
+              <p class="text-base text-center lg:text-start">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Eligendi consequatur tempore earum esse, veniam vel adipisci
                 saepe magnam nostrum voluptates a possimus quis nam facilis
@@ -50,27 +66,29 @@
             </div>
           </div>
           <button
-            class="text-2xl uppercase font-semibold text-white bg-main px-4 py-2 rounded-2xl hover:bg-teal-600 transition duration-200"
+            class="text-2xl uppercase font-semibold text-white bg-main px-4 py-2 rounded-2xl hover:bg-green-600 transition duration-200"
           >
-            Saiba Mais
+            <a href="https://github.com/meloluvert" target="_blank">Saiba Mais</a>
           </button>
         </div>
-        <div class="flex flex-row justify-between items-center">
-          <p class="text-2xl">Nos contate!</p>
+        <div class="flex flex-row justify-between items-center lg:justify-start gap-8">
+          <p class="text-2xl">Me contate!</p>
           <div class="flex flex-row gap-6">
             <div class="size-12">
-              <a href="#">
-                <img src="./img/icon_instagram.png" alt="" />
+              <a href="https://instagram.com/lucas_melo06" target="_blank">
+                <img src="./img/icon_instagram.png" class="hue-rotate-300
+
+                " alt="" />
               </a>
             </div>
             <div class="size-12">
               <a href="#">
-                <img src="./img/icon_linkedin.png" alt="" />
+                <img src="./img/icon_linkedin.png" class="hue-rotate-300" alt="Logo do linkedin" />
               </a>
             </div>
             <div class="size-12">
-              <a href="#">
-                <img src="./img/icon_whatsapp.png" alt="" />
+              <a href="https://wa.me/5521979683678" target="_blank">
+                <img src="./img/icon_whatsapp.png" class="hue-rotate-300" alt="logo do whatsapp" />
               </a>
             </div>
           </div>
@@ -78,52 +96,110 @@
       </div>
     </section>
 
-    <section class="bg-secondary px-6 py-8 text-black flex flex-col gap-8 items-center ">
-      <h2 class="text-white text-2xl font-extrabold">ÚLTIMOS PROJETOS</h2>
-      <div class=" grid grid-flow-row grid-cols-1 gap-12">
-        <div class="bg-white max-w-[380px] flex flex-col rounded-lg p-3 gap-4 drop-shadow-lg">
-          <div class="h-3/4 rounded-lg overflow-hidden"><img src="./img/Card1.webp" alt="" /></div>
+    <section
+      class="bg-secondary px-6 py-8 text-black flex flex-col gap-8 items-center lg:gap-16"
+    >
+      <h2 class="text-white text-2xl font-extrabold" id="projetos">ÚLTIMOS PROJETOS</h2>
+      <div class="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div
+          class="bg-white max-w-[380px] flex flex-col rounded-lg p-3 gap-4 drop-shadow-lg hover:scale-101 transition duration-200"
+        >
+          <div class="h-3/4 rounded-lg overflow-hidden">
+            <img src="./img/Card1.webp" alt="" />
+          </div>
           <div class="h-1/4">
-            <h3 class="text-lg">Projeto 1</h3>
-            <p class="text-base text-gray">Aplicativo Desktop</p>
+            <h3 class="text-lg"> <a href="https://fms-techlab-frontend.vercel.app/" target="_blank">Financial Management System </a></h3>
+            <p class="text-base text-gray">WebApp para gestão financeira pessoal</p>
           </div>
         </div>
-        <div class="bg-white max-w-[380px] flex flex-col rounded-lg p-3 gap-4 drop-shadow-lg">
-            <div class="h-3/4 rounded-lg overflow-hidden"><img src="./img/Card2.webp" alt="" /></div>
-            <div class="h-1/4">
-              <h3 class="text-lg">Projeto 2</h3>
-              <p class="text-base text-gray">Aplicativo Desktop</p>
-            </div>
+        <div
+          class="bg-white max-w-[380px] flex flex-col rounded-lg p-3 gap-4 drop-shadow-lg hover:scale-101 transition duration-200"
+        >
+          <div class="h-3/4 rounded-lg overflow-hidden">
+            <img src="./img/Card2.webp" alt="" />
           </div>
-          <div class="bg-white max-w-[380px] flex flex-col rounded-lg p-3 gap-4 drop-shadow-lg">
-            <div class="h-3/4 rounded-lg overflow-hidden"><img src="./img/Card3.jpg" alt="" /></div>
-            <div class="h-1/4">
-              <h3 class="text-lg">Projeto 3</h3>
-              <p class="text-base text-gray">Aplicativo Desktop</p>
-            </div>
+          <div class="h-1/4">
+            <h3 class="text-lg"><a href="https://github.com/meloluvert/EasyDoc" target="_blank" rel="noopener noreferrer"></a> EasyDoc</h3>
+            <p class="text-base text-gray">App para gerar currículos </p>
           </div>
-          <div class="bg-white max-w-[380px] flex flex-col rounded-lg p-3 gap-4 drop-shadow-lg">
-            <div class="h-3/4 rounded-lg overflow-hidden"><img src="./img/Card1.webp" alt="" /></div>
-            <div class="h-1/4">
-              <h3 class="text-lg">Projeto 4</h3>
-              <p class="text-base text-gray">Aplicativo Desktop</p>
-            </div>
+        </div>
+        <div
+          class="bg-white max-w-[380px] flex flex-col rounded-lg p-3 gap-4 drop-shadow-lg hover:scale-101 transition duration-200"
+        >
+          <div class="h-3/4 rounded-lg overflow-hidden">
+            <img src="./img/Card3.jpg" alt="" />
           </div>
-          <div class="bg-white max-w-[380px] flex flex-col rounded-lg p-3 gap-4 drop-shadow-lg">
-            <div class="h-3/4 rounded-lg overflow-hidden"><img src="./img/Card3.jpg" alt="" /></div>
-            <div class="h-1/4">
-              <h3 class="text-lg">Projeto 5</h3>
-              <p class="text-base text-gray">Aplicativo Desktop</p>
-            </div>
+          <div class="h-1/4">
+            <h3 class="text-lg"><a href="https://infohelper.vercel.app/" target="_blank"> InfoHelper </a></h3>
+            <p class="text-base text-gray">Site com notícias tech</p>
           </div>
-          <div class="bg-white max-w-[380px] flex flex-col rounded-lg p-3 gap-4 drop-shadow-lg">
-            <div class="h-3/4 rounded-lg overflow-hidden"><img src="./img/Card2.webp" alt="" /></div>
-            <div class="h-1/4">
-              <h3 class="text-lg">Projeto 6</h3>
-              <p class="text-base text-gray">Aplicativo Desktop</p>
-            </div>
+        </div>
+        <div
+          class="bg-white max-w-[380px] flex flex-col rounded-lg p-3 gap-4 drop-shadow-lg hover:scale-101 transition duration-200"
+        >
+          <div class="h-3/4 rounded-lg overflow-hidden">
+            <img src="./img/Card1.webp" alt="" />
           </div>
+          <div class="h-1/4">
+            <h3 class="text-lg"><a href="https://github.com/meloluvert/QuizInfo" target="_blank">QuizInfo </a> </h3>
+            <p class="text-base text-gray">Quiz sobre a Informática</p>
+          </div>
+        </div>
+        <div
+          class="bg-white max-w-[380px] flex flex-col rounded-lg p-3 gap-4 drop-shadow-lg hover:scale-101 transition duration-200"
+        >
+          <div class="h-3/4 rounded-lg overflow-hidden">
+            <img src="./img/Card3.jpg" alt="" />
+          </div>
+          <div class="h-1/4">
+            <h3 class="text-lg"><a href="https://github.com/meloluvert/CalculadoraEmprestimo" target="_blank">Calculadora de empréstimos</a> </h3>
+            <p class="text-base text-gray">Site para calcular empréstimos</p>
+          </div>
+        </div>
+        <div
+          class="bg-white max-w-[380px] flex flex-col rounded-lg p-3 gap-4 drop-shadow-lg hover:scale-101 transition duration-200"
+        >
+          <div class="h-3/4 rounded-lg overflow-hidden">
+            <img src="./img/Card2.webp" alt="" />
+          </div>
+          <div class="h-1/4">
+            <h3 class="text-lg"><a href="https://github.com/meloluvert/Jogos_Poo_cpp" target="_blank"> Jogos </a></h3>
+            <p class="text-base text-gray">Jogos feitos em C++ rodados pelo terminal</p>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white flex flex-col lg:items-center  p-8 gap-16 lg:gap-8">
+      <div class="flex flex-col lg:flex-row items-center gap-16 lg:justify-around">
+        <div class="flex flex-col items-center gap-3 lg:w-1/3">
+          <div class="size-16">
+            <img src="./img/icon_logo.png" alt="Logo do site" />
+          </div>
+          <p class="text-xl">
+            Desenvolvido por
+            <a href="https://github.com/meloluvert"
+              >Lucas Melo <br> </a
+              >Trainee DMK 2025
+          </p>
+        </div>
+        <div class="text-center gap-2 lg:w-1/3">
+          <h3 class="text-2xl uppercase">Sobre mim</h3>
+          <p class="text-base">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatibus aut itaque quibusdam qui.
+          </p>
+        </div>
+      </div>
+      <div class="text-2xl flex flex-col lg:flex-row lg:justify-center gap-2 items-center">
+        <p>Desenvolvido por</p>
+        <div class="max-w-[260px]">
+          <a href="https://www.byronsolutions.com/" class="block">
+          <img src="./img/logo_byron.png" alt=" Logo da byron.solutions" />
+        </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
